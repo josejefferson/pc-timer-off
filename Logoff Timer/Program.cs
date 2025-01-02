@@ -12,9 +12,9 @@ namespace Logoff_Timer
         {
             while (true)
             {
-                // ObtÈm o tempo de inatividade do usu·rio
+                // Obt√©m o tempo de inatividade do usu√°rio
                 uint time = Helpers.GetIdleTimeInSeconds();
-                Debug.WriteLine($"O usu·rio est· inativo h· {time} segundos.");
+                Debug.WriteLine($"O usu√°rio est√° inativo h√° {time} segundos.");
 
                 // Se o tempo de inatividade for maior ou igual ao tempo limite, exibe o popup de aviso e faz o logoff
                 if (time >= (INACTIVITY_TIME * 60))
@@ -29,7 +29,7 @@ namespace Logoff_Timer
         }
 
         /// <summary>
-        /// Exibe um popup de aviso de inatividade para o usu·rio e faz o logoff
+        /// Exibe um popup de aviso de inatividade para o usu√°rio e faz o logoff
         /// </summary>
         static void Logoff()
         {
@@ -45,11 +45,11 @@ namespace Logoff_Timer
         }
 
         /// <summary>
-        /// Exibe um popup de aviso de inatividade para o usu·rio
+        /// Exibe um popup de aviso de inatividade para o usu√°rio
         /// </summary>
         static void WarnLogoff()
         {
-            MessageBox.Show($"VocÍ est· h· mais de {INACTIVITY_TIME} minutos inativo. O seu usu·rio ser· desconectado em {WARNING_TIME} minutos. Salve o seu trabalho.", "Aviso de inatividade", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show($"Voc√™ est√° h√° mais de {INACTIVITY_TIME} minutos inativo. O seu usu√°rio ser√° desconectado em {WARNING_TIME} minutos. Salve o seu trabalho.", "Aviso de inatividade", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

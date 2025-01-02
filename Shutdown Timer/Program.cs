@@ -11,33 +11,33 @@ namespace Shutdown_Timer
         [STAThread]
         static void Main()
         {
-            // Aguarda atÈ que todas as sessıes ativas sejam encerradas
+            // Aguarda at√© que todas as sess√µes ativas sejam encerradas
             while (true)
             {
-                Debug.WriteLine($"\nH· {GetSessionCount()} usu·rios logados neste computador:");
+                Debug.WriteLine($"\nH√° {GetSessionCount()} usu√°rios logados neste computador:");
 
-                // Exibe os usu·rios logados
+                // Exibe os usu√°rios logados
                 foreach (var session in GetSessions())
                 {
                     Debug.WriteLine($" - {session.UserAccount}");
                 }
 
-                // Se n„o houver sessıes ativas, inicia o timer de desligamento
+                // Se n√£o houver sess√µes ativas, inicia o timer de desligamento
                 if (GetSessionCount() == 0)
                 {
                     Debug.WriteLine($"Desligando o computador em {SHUTDOWN_TIME} minutos...");
 
-                    // Tempo que o computador est· sem sessıes ativas
+                    // Tempo que o computador est√° sem sess√µes ativas
                     long timeStart = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
                     while (true)
                     {
                         long currentTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
-                        // Se algum usu·rio fizer login, cancela o desligamento
+                        // Se algum usu√°rio fizer login, cancela o desligamento
                         if (GetSessionCount() > 0)
                         {
-                            Debug.WriteLine($"Usu·rio fez login, cancelando o desligamento...");
+                            Debug.WriteLine($"Usu√°rio fez login, cancelando o desligamento...");
                             break;
                         }
 
@@ -60,7 +60,7 @@ namespace Shutdown_Timer
         }
 
         /// <summary>
-        /// Retorna as sessıes ativas no computador (ou seja, os usu·rios logados)
+        /// Retorna as sess√µes ativas no computador (ou seja, os usu√°rios logados)
         /// </summary>
         static List<ITerminalServicesSession> GetSessions()
         {
@@ -70,17 +70,17 @@ namespace Shutdown_Timer
 
             server.Open();
 
-            // Todas as sessıes ativas no computador
+            // Todas as sess√µes ativas no computador
             var allSessions = server.GetSessions();
 
-            // Filtra as sessıes que n„o est„o nulas
+            // Filtra as sess√µes que n√£o est√£o nulas
             var notNullSessions = allSessions.Where(session => session.UserAccount != null).ToList();
 
             return notNullSessions;
         }
 
         /// <summary>
-        /// Retorna a quantidade de sessıes ativas no computador
+        /// Retorna a quantidade de sess√µes ativas no computador
         /// </summary>
         static int GetSessionCount()
         {
