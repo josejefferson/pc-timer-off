@@ -19,20 +19,21 @@ DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 OutputBaseFilename=PC Timer Off
-SetupIconFile=..\Shutdown Timer\shutdown.ico
+SetupIconFile=Shutdown Timer\shutdown.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
 UninstallDisplayIcon={app}\Shutdown Timer.exe
 CloseApplications=force
 AlwaysRestart=yes
+VersionInfoVersion={#MyAppVersion}
 
 [Languages]
 Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 
 [Files]
-Source: "..\Shutdown Timer\bin\Release\net8.0-windows\publish\win-x86\Shutdown Timer.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\Logoff Timer\bin\Release\net8.0-windows\publish\win-x86\Logoff Timer.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "Shutdown Timer\bin\Release\net8.0-windows\publish\win-x86\Shutdown Timer.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "Logoff Timer\bin\Release\net8.0-windows\publish\win-x86\Logoff Timer.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Registry]
 ; Inicia o software para logoff do usuário quando cada usuário fizer login
