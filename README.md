@@ -20,8 +20,8 @@ Abra o instalador e siga as instruções
 - 32 ou 64 bits
 
 > [!IMPORTANT]
-> Se você utilizar o **Windows 7**, é necessário instalar o [Microsoft Visual C++ 2015-2019 Redistributable](https://learn.microsoft.com/pt-br/cpp/windows/latest-supported-vc-redist?view=msvc-170) e a atualização [KB3063858](https://learn.microsoft.com/pt-br/cpp/windows/latest-supported-vc-redist?view=msvc-170)\
-> Caso utilize o **Windows 8.1**, instale o [Microsoft Visual C++ 2015-2019 Redistributable](https://learn.microsoft.com/pt-br/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+> Se você utilizar o **Windows 7**, é necessário instalar o [Microsoft Visual C++ 2015-2019 Redistributable](https://learn.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60#additional-deps) e a atualização [KB3063858](https://learn.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60#additional-deps)\
+> Caso utilize o **Windows 8.1**, instale o [Microsoft Visual C++ 2015-2019 Redistributable](https://learn.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60#additional-deps)
 
 ### Personalizar tempos de inatividade
 
