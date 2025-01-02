@@ -20,13 +20,13 @@ namespace Logoff_Timer
 
         private static int GetSetting(string keyName, int defaultValue)
         {
-            using RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath);
+            using RegistryKey? key = Registry.LocalMachine.OpenSubKey(RegistryPath);
             return key?.GetValue(keyName) is int value ? value : defaultValue;
         }
 
         private static void SaveSetting(string keyName, int value)
         {
-            using RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath);
+            using RegistryKey key = Registry.LocalMachine.CreateSubKey(RegistryPath);
             key.SetValue(keyName, value, RegistryValueKind.DWord);
         }
     }

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shutdown Timer", "PC Timer Off\Shutdown Timer.csproj", "{FA43526D-9F0E-4821-9C92-D1497EF20966}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shutdown Timer", "Shutdown Timer\Shutdown Timer.csproj", "{FA43526D-9F0E-4821-9C92-D1497EF20966}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logoff Timer", "Logoff Timer\Logoff Timer.csproj", "{09F0E1E0-DB2C-4C69-827F-69454940382D}"
 EndProject
@@ -15,12 +15,12 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FA43526D-9F0E-4821-9C92-D1497EF20966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA43526D-9F0E-4821-9C92-D1497EF20966}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA43526D-9F0E-4821-9C92-D1497EF20966}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA43526D-9F0E-4821-9C92-D1497EF20966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA43526D-9F0E-4821-9C92-D1497EF20966}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA43526D-9F0E-4821-9C92-D1497EF20966}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{09F0E1E0-DB2C-4C69-827F-69454940382D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09F0E1E0-DB2C-4C69-827F-69454940382D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09F0E1E0-DB2C-4C69-827F-69454940382D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09F0E1E0-DB2C-4C69-827F-69454940382D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09F0E1E0-DB2C-4C69-827F-69454940382D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{09F0E1E0-DB2C-4C69-827F-69454940382D}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

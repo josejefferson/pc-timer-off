@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace Logoff_Timer
 {
     internal static class Program
@@ -12,10 +14,10 @@ namespace Logoff_Timer
             {
                 // Obtém o tempo de inatividade do usuário
                 uint time = Helpers.GetIdleTimeInSeconds();
-                Console.WriteLine($"O usuário está inativo há {time} segundos.");
+                Debug.WriteLine($"O usuário está inativo há {time} segundos.");
 
                 // Se o tempo de inatividade for maior ou igual ao tempo limite, exibe o popup de aviso e faz o logoff
-                if (time >= (INACTIVITY_TIME * 10))
+                if (time >= (INACTIVITY_TIME * 60))
                 {
                     Logoff();
                     break;
@@ -38,7 +40,7 @@ namespace Logoff_Timer
             Thread.Sleep(WARNING_TIME * 1000 * 60);
 
             // Faz o logoff
-            Console.WriteLine("Fazendo logoff");
+            Debug.WriteLine("Fazendo logoff");
             Helpers.Logoff();
         }
 
